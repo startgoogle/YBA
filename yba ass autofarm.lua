@@ -1,6 +1,4 @@
-if getgenv().Executed == true then return end
 task.wait(getgenv().runDelay)
-getgenv().Executed = true
 local Players = game:GetService("Players")
 local LocalPlayer = game.Players.LocalPlayer
 repeat task.wait() until LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
@@ -93,13 +91,13 @@ local function TPReturner()
     end
  end
 
-if LocalPlayer.Name == getgenv().Acc1 then
-    if Players:FindFirstChild(getgenv().Acc2) then
+if LocalPlayer.Name == "Par4Vox1" then
+    if Players:FindFirstChild("Par4Vox3") then
         Teleportv2()
         warn("Same Acc Detected.")
     end
-elseif LocalPlayer.Name == getgenv().Acc2 then
-    if Players:FindFirstChild(getgenv().Acc1) then
+elseif LocalPlayer.Name == "Par4Vox3" then
+    if Players:FindFirstChild("Par4Vox1") then
         Teleportv2()
         warn("Same Acc Detected.")
     end
